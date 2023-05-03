@@ -127,7 +127,6 @@ RUN wget https://humanconnectome.org/storage/app/media/workbench/workbench-linux
 # Stage: runtime
 FROM builder as runtime
 WORKDIR /
-COPY --from=diffparc /opt/diffparc-surf/dist/*.whl /opt/diffparc-surf/
 COPY --from=ants \ 
     # Commands to copy
     /opt/ants/bin/antsApplyTransforms \
