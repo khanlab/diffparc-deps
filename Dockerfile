@@ -158,6 +158,7 @@ ENV OS=Linux \
     FSLMULTIFILEQUIT=TRUE \
     FSLTCLSH=$FSLDIR/bin/fsltclsh \
     FSLWISH=$FSLDIR/bin/fslwish
-RUN apt-get purge -y -q curl g++ unzip wget \
+COPY . /opt/pythondeps
+RUN pip install --prefer-binary --no-cache-dir /opts/pythondeps && apt-get purge -y -q curl g++ unzip wget \
     && apt-get --purge -y -qq autoremove
 ENTRYPOINT ["/bin/bash"]

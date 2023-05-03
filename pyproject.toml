@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "pythondeps"
+version = "0.1.0"
+description = "Containerized python environment"
+authors = ["Ali Khan <alik@robarts.ca>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.12"
+matplotlib = "^3.5.2"
+nibabel = "^3.2.2"
+numpy = "^1.22.3"
+templateflow = "^0.8.1"
+PyPDF2 = "^1.27.12"
+nilearn = "^0.9.1"
+pandas = "^1.4.2"
+networkx = "^2.7.1"
+pillow = "9.0.1"
+pyvista = "^0.36.1"
+Pygments = "^2.11.2"
+snakebids = "^0.8.0"
+pybids = "0.15.6"
+
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
