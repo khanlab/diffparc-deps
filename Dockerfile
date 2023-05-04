@@ -159,6 +159,6 @@ ENV OS=Linux \
     FSLTCLSH=$FSLDIR/bin/fsltclsh \
     FSLWISH=$FSLDIR/bin/fslwish
 COPY . /opt/pythondeps
-RUN pip install --prefer-binary --no-cache-dir /opts/pythondeps && apt-get purge -y -q curl g++ unzip wget \
+RUN pip install --prefer-binary --no-cache-dir /opt/pythondeps && apt-get purge -y -q curl g++ unzip wget \
     && apt-get --purge -y -qq autoremove
 ENTRYPOINT ["/bin/bash"]
